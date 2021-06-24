@@ -8,7 +8,7 @@ class FooterComponent extends React.Component {
         height: '10rem',
         marginTop: '5rem',
       }}>
-      <h2>Generate tokens and make magic happen {"\u2728"}</h2>
+      <h2>Generate keys and make magic happen {"\u2728"}</h2>
       <Footer
         copyrightIcon
         years={[2012]}
