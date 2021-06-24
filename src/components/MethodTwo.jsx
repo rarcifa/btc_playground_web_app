@@ -31,7 +31,10 @@ class MethodTwo extends React.Component {
             mnemonic: '',
             btcAddress: '',
             publicKey: '',
-            privateKey: ''
+            privateKey: '',
+            path: "m/00'/0'/0",
+            seed: '',
+            node: ''
         }
 
         // Binding this keyword
@@ -40,7 +43,7 @@ class MethodTwo extends React.Component {
 
     // Handler method
     handleClick() {
-        
+
         // Define the network
         const network = bitcoin.networks.bitcoin
 
@@ -79,6 +82,9 @@ class MethodTwo extends React.Component {
         this.setState({ btcAddress })
         this.setState({ publicKey })
         this.setState({ privateKey })
+        this.setState({ path })
+        this.setState({ seed })
+        this.setState({ node })
     }
 
     render() {
@@ -87,7 +93,7 @@ class MethodTwo extends React.Component {
         const { classes } = this.props;
 
         return (
-            
+
             <Container
                 className={classes.margin}
                 fixed maxWidth="m">
@@ -118,7 +124,7 @@ class MethodTwo extends React.Component {
                         <Typography
                             className={classes.right}>
                             Generate a Hierarchical Deterministic
-                            <span className={classes.marked} > SegWit </span> 
+                            <span className={classes.marked} > SegWit </span>
                             bitcoin address
                             <Button
                                 id="generate-btn-method-two"
@@ -295,6 +301,23 @@ class MethodTwo extends React.Component {
                     </Grid>
 
                 </Grid>
+
+                {/** Secondary Information */}
+                <Grid
+                    container
+                    spacing={3}>
+                    <Grid
+                        className={classes.right}
+                        item xs={12}
+                        sm={11}>
+                        <Typography>
+                            <b>Path:</b> {this.state.path}
+                        </Typography>
+           
+                    </Grid>
+
+                </Grid>
+
             </Container>
         )
     }
