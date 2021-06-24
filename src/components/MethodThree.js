@@ -127,7 +127,7 @@ class MethodThree extends React.Component {
                     <Grid
                         className={classes.bottom}
                         item xs={12}
-                        sm={9}>
+                        sm={8}>
                         <Typography
                             className={classes.right}>
                             Generate an <span className={classes.marked} > n-out-of-m </span> multisignature <span className={classes.marked} > p2sh </span> bitcoin address
@@ -165,7 +165,7 @@ class MethodThree extends React.Component {
                     <Grid
                         item
                         xs={12}
-                        sm={9}>
+                        sm={8}>
                         <Tabs
                             className={classes.left}>
 
@@ -240,7 +240,7 @@ class MethodThree extends React.Component {
                         <Grid
                             item
                             xs={12}
-                            sm={9}>
+                            sm={8}>
                             <Tabs
                                 className={classes.left}>
 
@@ -300,7 +300,7 @@ class MethodThree extends React.Component {
                         <Grid
                             item
                             xs={12}
-                            sm={9}>
+                            sm={8}>
                             <Tabs
                                 className={classes.left}>
 
@@ -370,7 +370,7 @@ class MethodThree extends React.Component {
                         <Grid
                             item
                             xs={12}
-                            sm={9}>
+                            sm={8}>
                             <Tabs
                                 className={classes.left}>
 

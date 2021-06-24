@@ -24,7 +24,7 @@
     "react-clipboard.js": "^2.0.16",
     "react-dom": "^16.14.0",
     "react-footer-comp": "^3.0.1",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^4.0.3",
     "react-tabs": "^3.2.2",
     "web-vitals": "^1.1.2"
   },

@@ -114,7 +114,7 @@ class MethodTwo extends React.Component {
                     <Grid
                         className={classes.bottom}
                         item xs={12}
-                        sm={9}>
+                        sm={8}>
                         <Typography
                             className={classes.right}>
                             Generate a Hierarchical Deterministic
@@ -154,7 +154,7 @@ class MethodTwo extends React.Component {
                     <Grid
                         item
                         xs={12}
-                        sm={9}>
+                        sm={8}>
                         <FormControl
                             fullWidth
                             className={classes.margin}
@@ -191,7 +191,7 @@ class MethodTwo extends React.Component {
                     <Grid
                         className={classes.right}
                         item xs={12}
-                        sm={9}>
+                        sm={8}>
                         <FormControl
                             fullWidth
                             className={classes.margin}
@@ -229,7 +229,7 @@ class MethodTwo extends React.Component {
                     <Grid
                         item
                         xs={12}
-                        sm={9}>
+                        sm={8}>
                         <TextField
                             id="filled-full-width"
                             label="Read Only"
@@ -273,7 +273,7 @@ class MethodTwo extends React.Component {
                     <Grid
                         item
                         xs={12}
-                        sm={9}>
+                        sm={8}>
                         <TextField
                             id="filled-full-width"
                             label="Read Only"

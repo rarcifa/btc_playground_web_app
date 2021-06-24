@@ -73,7 +73,7 @@ class MethodOne extends React.Component {
                     <Grid
                         className={classes.bottom}
                         item xs={12}
-                        sm={9}>
+                        sm={8}>
                         <Typography
                             className={classes.right}>
                             Generate a random <span className={classes.marked}>mnemonic</span> words following <span className={classes.marked}>bip39</span> standard
@@ -111,7 +111,7 @@ class MethodOne extends React.Component {
                     <Grid
                         className={classes.right}
                         item xs={12}
-                        sm={9}>
+                        sm={8}>
                         <FormControl
                             fullWidth
                             className={classes.margin}
