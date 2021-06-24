@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render the App Component correctly 1`] = `ReactWrapper {}`;
