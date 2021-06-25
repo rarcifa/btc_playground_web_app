@@ -95,8 +95,7 @@ class MethodTwo extends React.Component {
         return (
 
             <Container
-                className={classes.margin}
-                fixed maxWidth="m">
+                className={classes.margin}>
 
                 {/** Main Container - Starts here */}
                 <Grid
@@ -136,7 +135,6 @@ class MethodTwo extends React.Component {
                             </Button>
                         </Typography>
                     </Grid>
-
                 </Grid>
 
                 {/** btcAddress Grid - Starts here */}
@@ -299,7 +297,6 @@ class MethodTwo extends React.Component {
                         >
                         </TextField>
                     </Grid>
-
                 </Grid>
 
                 {/** Secondary Information */}
@@ -313,11 +310,8 @@ class MethodTwo extends React.Component {
                         <Typography>
                             <b>Path:</b> {this.state.path}
                         </Typography>
-           
                     </Grid>
-
                 </Grid>
-
             </Container>
         )
     }

@@ -5,6 +5,7 @@ import MethodTwo from './components/MethodTwo';
 import MethodThree from './components/MethodThree';
 import Footer from './components/FooterComponent'
 import Header from './components/HeaderComponent'
+import InputList from './components/InputList/InputList'
 
 // Main App 
 function App() {
@@ -23,7 +24,10 @@ function App() {
         {/** Second Method */}
         <MethodTwo />
 
-        {/** Third Method */}
+      {/** Third Method */}
+        <InputList/>
+
+        {/** Automation  Method */}
         <MethodThree />
 
       </header>

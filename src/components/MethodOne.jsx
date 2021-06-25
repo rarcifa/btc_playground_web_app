@@ -48,8 +48,7 @@ class MethodOne extends React.Component {
 
             <Container
                 className={classes.margin}
-                fixed
-                maxWidth="m">
+                fixed>
 
                 {/** Main Container - Starts here */}
                 <Grid

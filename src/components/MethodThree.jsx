@@ -118,7 +118,7 @@ class MethodThree extends React.Component {
                         <Typography
                             variant="h4"
                             className={classes.right}>
-                            MultiSig - P2SH BTC Address
+                            Automated Method
                         </Typography>
                     </Grid>
 
@@ -130,7 +130,7 @@ class MethodThree extends React.Component {
                         sm={8}>
                         <Typography
                             className={classes.right}>
-                            Generate an <span className={classes.marked} > n-out-of-m </span> multisignature <span className={classes.marked} > p2sh </span> bitcoin address
+                            Generate a <span className={classes.marked} > 3-out-of-2 </span> multisignature <span className={classes.marked} > p2sh </span> bitcoin address
                             <Button
                                 id="generate-btn-method-three"
                                 className={classes.marginLeft}
@@ -142,7 +142,7 @@ class MethodThree extends React.Component {
                         </Typography>
                     </Grid>
 
-                </Grid>
+                </Grid>                
 
                 {/** btcAddress Grid - Starts here */}
                 <Grid
