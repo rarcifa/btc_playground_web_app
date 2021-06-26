@@ -22,7 +22,7 @@ import * as bip39 from 'bip39';
 import * as bitcoin from 'bitcoinjs-lib';
 
 export default function InputList() {
-    const [inputList, setInputList] = useState([{ publicKeys: "" }]);
+    const [inputList, setInputList] = useState([{ publicKeys: '' }]);
     const [number, setNumber] = useState(1);
     const [p2shAddress, setP2shAddress] = useState('');
 
@@ -53,7 +53,7 @@ export default function InputList() {
 
     // handle click event of the Add button
     const handleAddClick = () => {
-        setInputList([...inputList, { publicKeys: "" }]);
+        setInputList([...inputList, { publicKeys: '' }]);
     };
 
     const handleClick = (e, index) => {
@@ -86,7 +86,7 @@ export default function InputList() {
         const { name } = e.currentTarget;
         const list = [...inputList];
         list[index][name] = nodes.map(node => node.publicKey.toString('hex'));
-        setInputList(list, { publicKeys: "" });
+        setInputList(list, { publicKeys: '' });
 
         // Public Key
         const publicKeys = nodes.map(node => node.publicKey)
@@ -123,7 +123,7 @@ export default function InputList() {
                 {/** Second Column - Step 1 */}
                 <Grid
                     className={classes.bottom}
-                    item 
+                    item
                     xs={12}
                     sm={8}>
                     <Typography
