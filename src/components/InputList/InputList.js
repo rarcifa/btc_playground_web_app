@@ -1,4 +1,5 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
+import * as React from 'react';
 import {
     FormControl,
     Typography,
@@ -23,7 +24,7 @@ import * as bitcoin from 'bitcoinjs-lib';
 export default function InputList() {
     const [inputList, setInputList] = useState([{ publicKeys: "" }]);
     const [number, setNumber] = useState(1);
-    const [p2shAddress, setP2shAddress] = useState('hello world');
+    const [p2shAddress, setP2shAddress] = useState('');
 
     const handleChange = (e) => {
         setNumber(e.target.value);
@@ -100,8 +101,7 @@ export default function InputList() {
     return (
         <Container
             className={classes.margin}
-            fixed
-            maxWidth="m">
+            fixed>
 
             {/** Step 1 - Starts here */}
             <Grid
@@ -123,7 +123,8 @@ export default function InputList() {
                 {/** Second Column - Step 1 */}
                 <Grid
                     className={classes.bottom}
-                    item xs={12}
+                    item 
+                    xs={12}
                     sm={8}>
                     <Typography
                         className={classes.right}>
@@ -132,11 +133,13 @@ export default function InputList() {
                         address.
 
                         {inputList.map((x, i) => {
+
                             return (
                                 <>
                                     {inputList.length - 1 === i && <Button
+                                        key={x}
                                         className={classes.marginLeft}
-                                        id="generate-btn-method-three"
+                                        id="generate-btn-method-input"
                                         variant="outlined"
                                         color="primary"
                                         name="publicKeys" onClick={handleAddClick}>Add</Button>}
@@ -153,6 +156,7 @@ export default function InputList() {
                 return (
 
                     <Grid
+                        key={x}
                         container
                         spacing={3}>
 
@@ -179,7 +183,7 @@ export default function InputList() {
                                 variant="outlined">
                                 <Label />
                                 <OutlinedInput
-                                    id="outlined-adornment-amount"
+                                    id="generate-btn-method-input"
                                     name="publicKeys"
                                     value={x.publicKeys}
                                     onChange={e => handleInputChange(e, i)}
@@ -266,7 +270,7 @@ export default function InputList() {
                         className={classes.right}>
                         <b>STEP 3: </b> Generate <span className={classes.marked} > n-out-of-m </span> multisignature address.
                         <Button
-                            id="generate-btn-method-three"
+                            id="generate-btn-method-input"
                             className={classes.marginLeft}
                             variant="outlined"
                             color="primary"
@@ -308,7 +312,7 @@ export default function InputList() {
                             name="publicKeys"
                             value={p2shAddress}
                             labelWidth={75}
-                            startAdornment={<Copy data-clipboard-text={''}><Clipboard /></Copy>}
+                            startAdornment={<Copy data-clipboard-text={p2shAddress}><Clipboard /></Copy>}
                         />
                     </FormControl>
                 </Grid>
