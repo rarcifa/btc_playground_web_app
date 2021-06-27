@@ -144,7 +144,6 @@ export default function InputList() {
                                     {inputList.length - 1 === i && <Button
                                         key={x}
                                         className={classes.marginLeft}
-                                        id="generate-btn-method-input"
                                         variant="outlined"
                                         color="primary"
                                         name="publicKeys" onClick={handleAddClick}>Add</Button>}

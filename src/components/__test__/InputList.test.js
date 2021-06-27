@@ -1,5 +1,5 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount, shallow } from 'enzyme';
 import { MuiThemeProvider } from '@material-ui/core';
 import InputList from '../InputList/InputList';
 import theme from '../../theme';
@@ -14,4 +14,5 @@ describe('InputList', () => {
   it('should render the Label Component correctly', () => {
     expect(wrapper).toMatchSnapshot();
   });
+
 });
