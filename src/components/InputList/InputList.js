@@ -70,8 +70,6 @@ export default function InputList() {
         let N = parseInt(number)
         setNumber(number)
 
-        console.log(M)
-        console.log(N)
         // Mnemonics method for MultiSig
         const mnemonics = new Array(N).fill(0).map(() => bip39.generateMnemonic())
 
