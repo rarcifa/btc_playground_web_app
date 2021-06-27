@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount, shallow } from 'enzyme';
-import { Button, MuiThemeProvider } from '@material-ui/core';
+import { Button, IconButton, MuiThemeProvider } from '@material-ui/core';
 import MethodOne from '../MethodOne';
 import theme from '../../theme';
 
