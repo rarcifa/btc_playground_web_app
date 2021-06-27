@@ -1,5 +1,4 @@
-import { useState } from 'react';
-import * as React from 'react';
+import React, { useState } from 'react';
 import {
     FormControl,
     Typography,
@@ -9,23 +8,26 @@ import {
     OutlinedInput,
     TextField,
     IconButton,
-    MenuItem
+    MenuItem,
+    InputAdornment
 } from '@material-ui/core';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import HighlightOffIcon from '@material-ui/icons/HighlightOff';
-import Clipboard from '../Clipboard';
 import Label from '../Label';
 import 'react-tabs/style/react-tabs.css';
-import Copy from 'react-clipboard.js';
 import { makeStyles } from '@material-ui/core/styles';
 import * as bip32 from 'bip32';
 import * as bip39 from 'bip39';
 import * as bitcoin from 'bitcoinjs-lib';
 
 export default function InputList() {
+
+    // functional component states
     const [inputList, setInputList] = useState([{ publicKeys: '' }]);
     const [number, setNumber] = useState(1);
-    const [p2shAddress, setP2shAddress] = useState('');
+    const [p2shAddress, setP2shAddress] = useState(1);
 
+    // change handler
     const handleChange = (e) => {
         setNumber(e.target.value);
     };
@@ -65,8 +67,11 @@ export default function InputList() {
 
         // Define multisig parameters
         let M = 1
-        let N = number
+        let N = parseInt(number)
+        setNumber(number)
 
+        console.log(M)
+        console.log(N)
         // Mnemonics method for MultiSig
         const mnemonics = new Array(N).fill(0).map(() => bip39.generateMnemonic())
 
@@ -135,7 +140,7 @@ export default function InputList() {
                         {inputList.map((x, i) => {
 
                             return (
-                                <>
+                                <span key={Math.random()}>
                                     {inputList.length - 1 === i && <Button
                                         key={x}
                                         className={classes.marginLeft}
@@ -143,7 +148,7 @@ export default function InputList() {
                                         variant="outlined"
                                         color="primary"
                                         name="publicKeys" onClick={handleAddClick}>Add</Button>}
-                                </>
+                                </span>
                             )
                         }
                         )}
@@ -156,7 +161,7 @@ export default function InputList() {
                 return (
 
                     <Grid
-                        key={x}
+                        key={Math.random()}
                         container
                         spacing={3}>
 
@@ -192,7 +197,12 @@ export default function InputList() {
                                         onClick={e => handleClick(e, i)} variant="outlined" color="secondary">
                                         Generate
                                     </Button>}
-                                    startAdornment={<Copy data-clipboard-text={x.publicKeys}><Clipboard /></Copy>}
+                                    startAdornment={<InputAdornment position="start">
+                                        <IconButton
+                                            onClick={() => { navigator.clipboard.writeText(x.publicKeys) }}>
+                                            <FileCopyOutlinedIcon />
+                                        </IconButton>
+                                    </InputAdornment>}
                                 />
                             </FormControl>
                         </Grid>
@@ -204,9 +214,9 @@ export default function InputList() {
                             xs={12}
                             sm={1}>
                             {inputList.length !== 1 && <IconButton
+                                onClick={() => handleRemoveClick(i)}
                                 variant="contained"
-                                color="secondary"><HighlightOffIcon
-                                    onClick={() => handleRemoveClick(i)}>Remove</HighlightOffIcon></IconButton>}
+                                color="secondary"><HighlightOffIcon >Remove</HighlightOffIcon></IconButton>}
                         </Grid>
                     </Grid>
                 );
@@ -230,10 +240,10 @@ export default function InputList() {
                     item xs={12}
                     sm={8}>
                     <Typography
+                        component={'div'}
                         className={classes.right}>
                         <b>STEP 2: </b> Enter the amount of signatures
                         <TextField
-                            id="standard-select-currency"
                             select
                             value={number}
                             onChange={handleChange}
@@ -269,14 +279,7 @@ export default function InputList() {
                     <Typography
                         className={classes.right}>
                         <b>STEP 3: </b> Generate <span className={classes.marked} > n-out-of-m </span> multisignature address.
-                        <Button
-                            id="generate-btn-method-input"
-                            className={classes.marginLeft}
-                            variant="outlined"
-                            color="primary"
-                            onClick={''}>
-                            Generate
-                        </Button>
+
                     </Typography>
                 </Grid>
             </Grid>
@@ -312,7 +315,12 @@ export default function InputList() {
                             name="publicKeys"
                             value={p2shAddress}
                             labelWidth={75}
-                            startAdornment={<Copy data-clipboard-text={p2shAddress}><Clipboard /></Copy>}
+                            startAdornment={<InputAdornment position="start">
+                                <IconButton
+                                    onClick={() => { navigator.clipboard.writeText(p2shAddress) }}>
+                                    <FileCopyOutlinedIcon />
+                                </IconButton>
+                            </InputAdornment>}
                         />
                     </FormControl>
                 </Grid>

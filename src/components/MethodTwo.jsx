@@ -7,12 +7,12 @@ import {
     Grid,
     OutlinedInput,
     TextField,
-    InputAdornment
+    InputAdornment,
+    IconButton
 } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
-import Clipboard from './Clipboard';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import Label from './Label';
-import Copy from 'react-clipboard.js';
 import Key from '@material-ui/icons/VpnKeyOutlined';
 import * as bip32 from 'bip32';
 import * as bip39 from 'bip39';
@@ -168,7 +168,12 @@ class MethodTwo extends React.Component {
                                 id="outlined-adornment-amount"
                                 value={this.state.btcAddress}
                                 labelWidth={75}
-                                startAdornment={<Copy data-clipboard-text={this.state.btcAddress}><Clipboard /></Copy>}
+                                startAdornment={<InputAdornment position="start">
+                                <IconButton 
+                                onClick={() => {navigator.clipboard.writeText(this.state.btcAddress)}}>
+                                    <FileCopyOutlinedIcon />
+                                </IconButton>
+                            </InputAdornment>}
                             />
                         </FormControl>
                     </Grid>
@@ -205,7 +210,12 @@ class MethodTwo extends React.Component {
                                 id="outlined-adornment-amount"
                                 value={this.state.mnemonic}
                                 labelWidth={75}
-                                startAdornment={<Copy data-clipboard-text={this.state.mnemonic}><Clipboard /></Copy>}
+                                startAdornment={<InputAdornment position="start">
+                                <IconButton 
+                                onClick={() => {navigator.clipboard.writeText(this.state.mnemonic)}}>
+                                    <FileCopyOutlinedIcon />
+                                </IconButton>
+                            </InputAdornment>}
                             />
                         </FormControl>
                     </Grid>
@@ -238,7 +248,6 @@ class MethodTwo extends React.Component {
                             id="filled-full-width"
                             label="Read Only"
                             fullWidth
-                            defaultValue=" "
                             className={classes.margin}
                             variant="filled"
                             value={this.state.publicKey}
@@ -282,7 +291,6 @@ class MethodTwo extends React.Component {
                             id="filled-full-width"
                             label="Read Only"
                             fullWidth
-                            defaultValue=" "
                             className={classes.margin}
                             variant="filled"
                             value={this.state.privateKey}

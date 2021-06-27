@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
 
         {/** Header Title */}
-        <Header />
+        <Header key={'header'} />
 
         {/** First Method */}
         <MethodOne />
@@ -25,7 +25,7 @@ function App() {
         <MethodTwo />
 
       {/** Third Method */}
-        <InputList/>
+        <InputList />
 
         {/** Automation  Method */}
         <MethodThree />

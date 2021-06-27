@@ -6,11 +6,12 @@ import {
     Button,
     Container,
     Grid,
-    OutlinedInput
+    OutlinedInput,
+    IconButton,
+    InputAdornment
 } from '@material-ui/core';
-import Clipboard from './Clipboard';
 import Label from './Label';
-import Copy from 'react-clipboard.js';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import * as bip39 from 'bip39';
 
 // Class Component
@@ -120,7 +121,12 @@ class MethodOne extends React.Component {
                                 id="outlined-adornment-amount"
                                 value={this.state.mnemonic}
                                 labelWidth={75}
-                                startAdornment={<Copy onSuccess={this.onSuccess} data-clipboard-text={this.state.mnemonic}><Clipboard /></Copy>}
+                                startAdornment={<InputAdornment position="start">
+                                <IconButton 
+                                onClick={() => {navigator.clipboard.writeText(this.state.mnemonic)}}>
+                                    <FileCopyOutlinedIcon />
+                                </IconButton>
+                            </InputAdornment>}
                             />
                         </FormControl>
                     </Grid>

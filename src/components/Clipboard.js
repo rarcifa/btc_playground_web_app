@@ -7,7 +7,9 @@ function Clipboard() {
 
     return (
         <InputAdornment position="start">
-            <IconButton aria-label="toggle password visibility">
+            <IconButton 
+            aria-label="toggle password visibility"
+            onClick={() => {navigator.clipboard.writeText(this.state.textToCopy)}}>
                 <FileCopyOutlinedIcon />
             </IconButton>
         </InputAdornment>

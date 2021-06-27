@@ -7,14 +7,14 @@ import {
     Grid,
     OutlinedInput,
     TextField,
-    InputAdornment
+    InputAdornment,
+    IconButton
 } from '@material-ui/core';
-import Clipboard from './Clipboard';
 import Label from './Label';
 import Key from '@material-ui/icons/VpnKeyOutlined';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
-import Copy from 'react-clipboard.js';
+import FileCopyOutlinedIcon from '@material-ui/icons/FileCopyOutlined';
 import { withStyles } from '@material-ui/core/styles';
 import * as bip32 from 'bip32';
 import * as bip39 from 'bip39';
@@ -102,8 +102,7 @@ class MethodThree extends React.Component {
 
             <Container
                 className={classes.margin}
-                fixed
-                maxWidth="m">
+                fixed>
 
                 {/** Main Container - Starts here */}
                 <Grid
@@ -194,7 +193,12 @@ class MethodThree extends React.Component {
                                         id="outlined-adornment-amount"
                                         value={this.state.p2shAddress}
                                         labelWidth={75}
-                                        startAdornment={<Copy data-clipboard-text={this.state.p2shAddress}><Clipboard /></Copy>}
+                                        startAdornment={<InputAdornment position="start">
+                                        <IconButton 
+                                        onClick={() => {navigator.clipboard.writeText(this.state.p2shAddress)}}>
+                                            <FileCopyOutlinedIcon />
+                                        </IconButton>
+                                    </InputAdornment>}
                                     />
                                 </FormControl>
                             </TabPanel>
@@ -208,7 +212,12 @@ class MethodThree extends React.Component {
                                         id="outlined-adornment-amount"
                                         value={this.state.p2wshAddress}
                                         labelWidth={75}
-                                        startAdornment={<Copy data-clipboard-text={this.state.p2wshAddress}><Clipboard /></Copy>}
+                                        startAdornment={<InputAdornment position="start">
+                                        <IconButton 
+                                        onClick={() => {navigator.clipboard.writeText(this.state.p2wshAddress)}}>
+                                            <FileCopyOutlinedIcon />
+                                        </IconButton>
+                                    </InputAdornment>}
                                     />
                                 </FormControl>
                             </TabPanel>
@@ -267,7 +276,12 @@ class MethodThree extends React.Component {
                                                 id="outlined-adornment-amount"
                                                 value={mnemonics}
                                                 labelWidth={75}
-                                                startAdornment={<Copy data-clipboard-text={mnemonics}><Clipboard /></Copy>}
+                                                startAdornment={<InputAdornment position="start">
+                                                <IconButton 
+                                                onClick={() => {navigator.clipboard.writeText(this.state.mnemonics)}}>
+                                                    <FileCopyOutlinedIcon />
+                                                </IconButton>
+                                            </InputAdornment>}
                                             />
                                         </FormControl>
                                     </TabPanel>
@@ -326,7 +340,6 @@ class MethodThree extends React.Component {
                                                 id="filled-full-width"
                                                 label="Read Only"
                                                 fullWidth
-                                                defaultValue=" "
                                                 variant="filled"
                                                 value={publicKey.toString('hex')}
                                                 InputProps={{
@@ -396,7 +409,6 @@ class MethodThree extends React.Component {
                                                 id="filled-full-width"
                                                 label="Read Only"
                                                 fullWidth
-                                                defaultValue=" "
                                                 variant="filled"
                                                 value={privateKeys}
                                                 InputProps={{
