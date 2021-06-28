@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputList should render the InputList Component should contain standard-select-currency text field. 1`] = `ReactWrapper {}`;
+
+exports[`InputList should render the InputList Component should trigger click outlinedAdornmentAmount. 1`] = `ReactWrapper {}`;
+
+exports[`InputList should render the InputList Component should trigger click. 1`] = `ReactWrapper {}`;

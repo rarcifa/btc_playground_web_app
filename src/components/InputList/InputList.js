@@ -103,6 +103,9 @@ export default function InputList() {
 
     return (
         <Container
+            aria-label="input-list-container"
+            size="md"
+            id="input-list-container"
             className={classes.margin}
             fixed>
 
@@ -140,13 +143,14 @@ export default function InputList() {
                             return (
                                 <span key={Math.random()}>
                                     {inputList.length - 1 === i && <Button
-                                        key={x}
+                                        key={`__key__${x}`}
                                         className={classes.marginLeft}
+                                        id="generate-btn-method-three"
                                         variant="outlined"
                                         color="primary"
                                         name="publicKeys" onClick={handleAddClick}>Add</Button>}
                                 </span>
-                            )
+                            ) || <></>
                         }
                         )}
                     </Typography>
@@ -158,7 +162,7 @@ export default function InputList() {
                 return (
 
                     <Grid
-                        key={Math.random()}
+                         key={i + '__key'}
                         container
                         spacing={3}>
 
@@ -190,7 +194,7 @@ export default function InputList() {
                                     value={x.publicKeys}
                                     onChange={e => handleInputChange(e, i)}
                                     labelWidth={75}
-                                    endAdornment={<Button name="publicKeys"
+                                    endAdornment={<Button id={`outlinedAdornmentAmount-${i}`} name="publicKeys"
                                         onClick={e => handleClick(e, i)} variant="outlined" color="secondary">
                                         Generate
                                     </Button>}
@@ -241,6 +245,7 @@ export default function InputList() {
                         className={classes.right}>
                         <b>STEP 2: </b> Enter the amount of signatures
                         <TextField
+                        id="standard-select-currency"
                             select
                             value={number}
                             onChange={handleChange}

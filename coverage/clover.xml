@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1624918247622" clover="3.2.0">
+  <project timestamp="1624918247623" name="All files">
+    <metrics statements="121" coveredstatements="101" conditionals="12" coveredconditionals="10" methods="58" coveredmethods="44" elements="191" coveredelements="155" complexity="0" loc="121" ncloc="121" packages="3" files="9" classes="9"/>
+    <package name="src">
+      <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+      <file name="App.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/App.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="13" count="1" type="stmt"/>
+      </file>
+      <file name="theme.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/theme.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="0" coveredmethods="0"/>
+        <line num="3" count="6" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components">
+      <metrics statements="72" coveredstatements="66" conditionals="6" coveredconditionals="6" methods="35" coveredmethods="29"/>
+      <file name="FooterComponent.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/FooterComponent.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="1" type="stmt"/>
+      </file>
+      <file name="HeaderComponent.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/HeaderComponent.js">
+        <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+        <line num="14" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="52" count="1" type="stmt"/>
+      </file>
+      <file name="Label.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/Label.js">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <line num="6" count="41" type="stmt"/>
+      </file>
+      <file name="MethodOne.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/MethodOne.js">
+        <metrics statements="9" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="5" coveredmethods="4"/>
+        <line num="22" count="2" type="stmt"/>
+        <line num="25" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="37" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="46" count="3" type="stmt"/>
+        <line num="48" count="3" type="stmt"/>
+        <line num="126" count="0" type="stmt"/>
+        <line num="141" count="2" type="stmt"/>
+      </file>
+      <file name="MethodThree.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/MethodThree.js">
+        <metrics statements="33" coveredstatements="30" conditionals="6" coveredconditionals="6" methods="20" coveredmethods="17"/>
+        <line num="28" count="2" type="stmt"/>
+        <line num="31" count="2" type="stmt"/>
+        <line num="40" count="2" type="stmt"/>
+        <line num="47" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+        <line num="53" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="57" count="3" type="stmt"/>
+        <line num="60" count="3" type="stmt"/>
+        <line num="63" count="3" type="stmt"/>
+        <line num="66" count="3" type="stmt"/>
+        <line num="69" count="3" type="stmt"/>
+        <line num="72" count="3" type="stmt"/>
+        <line num="75" count="3" type="stmt"/>
+        <line num="79" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="89" count="1" type="stmt"/>
+        <line num="90" count="1" type="stmt"/>
+        <line num="91" count="1" type="stmt"/>
+        <line num="92" count="1" type="stmt"/>
+        <line num="93" count="1" type="stmt"/>
+        <line num="99" count="7" type="stmt"/>
+        <line num="101" count="7" type="stmt"/>
+        <line num="198" count="0" type="stmt"/>
+        <line num="217" count="0" type="stmt"/>
+        <line num="259" count="15" type="stmt"/>
+        <line num="269" count="15" type="stmt"/>
+        <line num="281" count="0" type="stmt"/>
+        <line num="324" count="6" type="stmt"/>
+        <line num="334" count="6" type="stmt"/>
+        <line num="393" count="3" type="stmt"/>
+        <line num="403" count="3" type="stmt"/>
+        <line num="437" count="2" type="stmt"/>
+      </file>
+      <file name="MethodTwo.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/MethodTwo.js">
+        <metrics statements="25" coveredstatements="23" conditionals="0" coveredconditionals="0" methods="6" coveredmethods="4"/>
+        <line num="27" count="2" type="stmt"/>
+        <line num="30" count="2" type="stmt"/>
+        <line num="41" count="2" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="51" count="1" type="stmt"/>
+        <line num="54" count="1" type="stmt"/>
+        <line num="57" count="1" type="stmt"/>
+        <line num="60" count="1" type="stmt"/>
+        <line num="63" count="1" type="stmt"/>
+        <line num="66" count="1" type="stmt"/>
+        <line num="69" count="1" type="stmt"/>
+        <line num="72" count="1" type="stmt"/>
+        <line num="75" count="1" type="stmt"/>
+        <line num="81" count="1" type="stmt"/>
+        <line num="82" count="1" type="stmt"/>
+        <line num="83" count="1" type="stmt"/>
+        <line num="84" count="1" type="stmt"/>
+        <line num="85" count="1" type="stmt"/>
+        <line num="86" count="1" type="stmt"/>
+        <line num="87" count="1" type="stmt"/>
+        <line num="93" count="9" type="stmt"/>
+        <line num="95" count="9" type="stmt"/>
+        <line num="173" count="0" type="stmt"/>
+        <line num="215" count="0" type="stmt"/>
+        <line num="329" count="2" type="stmt"/>
+      </file>
+    </package>
+    <package name="src.components.InputList">
+      <metrics statements="47" coveredstatements="33" conditionals="6" coveredconditionals="4" methods="22" coveredmethods="14"/>
+      <file name="InputList.js" path="/Users/ricardo.arcifa/Desktop/Blockchain/React-app/src/components/InputList/InputList.js">
+        <metrics statements="47" coveredstatements="33" conditionals="6" coveredconditionals="4" methods="22" coveredmethods="14"/>
+        <line num="26" count="4" type="stmt"/>
+        <line num="27" count="4" type="stmt"/>
+        <line num="28" count="4" type="stmt"/>
+        <line num="31" count="4" type="stmt"/>
+        <line num="32" count="0" type="stmt"/>
+        <line num="36" count="4" type="stmt"/>
+        <line num="39" count="4" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="41" count="0" type="stmt"/>
+        <line num="42" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="46" count="0" type="stmt"/>
+        <line num="50" count="4" type="stmt"/>
+        <line num="51" count="0" type="stmt"/>
+        <line num="52" count="0" type="stmt"/>
+        <line num="53" count="0" type="stmt"/>
+        <line num="57" count="4" type="stmt"/>
+        <line num="58" count="0" type="stmt"/>
+        <line num="61" count="4" type="stmt"/>
+        <line num="63" count="2" type="stmt"/>
+        <line num="66" count="2" type="stmt"/>
+        <line num="69" count="2" type="stmt"/>
+        <line num="70" count="2" type="stmt"/>
+        <line num="71" count="2" type="stmt"/>
+        <line num="74" count="2" type="stmt"/>
+        <line num="77" count="2" type="stmt"/>
+        <line num="80" count="2" type="stmt"/>
+        <line num="83" count="2" type="stmt"/>
+        <line num="86" count="2" type="stmt"/>
+        <line num="89" count="2" type="stmt"/>
+        <line num="90" count="2" type="stmt"/>
+        <line num="91" count="2" type="stmt"/>
+        <line num="92" count="2" type="stmt"/>
+        <line num="95" count="2" type="stmt"/>
+        <line num="98" count="2" type="stmt"/>
+        <line num="101" count="2" type="stmt"/>
+        <line num="104" count="4" type="stmt"/>
+        <line num="143" count="4" type="cond" truecount="1" falsecount="1"/>
+        <line num="162" count="4" type="stmt"/>
+        <line num="195" count="0" type="stmt"/>
+        <line num="198" count="2" type="stmt"/>
+        <line num="203" count="0" type="stmt"/>
+        <line num="218" count="0" type="stmt"/>
+        <line num="255" count="60" type="stmt"/>
+        <line num="322" count="0" type="stmt"/>
+        <line num="335" count="2" type="stmt"/>
+        <line num="375" count="2" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
